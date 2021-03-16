@@ -1,5 +1,6 @@
 module.exports = {
   assetPrefix: ".",
+  target: "experimental-serverless-trace",
   env: {
     DATA: {
       METRICS: {
