@@ -82,7 +82,7 @@ module.exports = {
         },
       },
       CONFIGURATION: {
-        SPRINT: "TBD",
+        SPRINT: "7",
         "ACCEPTANCE PROFILE": "3G FAST",
         "NETWORK PROFILE": "LTE",
         "NETWORK THROTTLING": "70 ms TCP RTT, 12000 Kbps (SIMULATED)",
