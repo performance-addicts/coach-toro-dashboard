@@ -115,8 +115,7 @@ module.exports = {
         },
         PLP: {
           URL: {
-            DEV:
-              "https://development1.coach.com/en/women/handbags?page=7&start=0",
+            DEV: "https://development1.coach.com/sale",
             PRD: "https://www.coach.com/shop/women-new-arrivals-new-arrivals",
           },
           KPI: {

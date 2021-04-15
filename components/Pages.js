@@ -7,10 +7,18 @@ function Pages({ data }) {
     <>
       <H2>Pages</H2>
       <H4>
-        Current prod:
+        Current prod:{" "}
         <a href="https://www.coach.com" target="_blank" rel="noopener">
           https://www.coach.com
         </a>
+      </H4>
+      <H4>
+        {" "}
+        PLP url changed to{" "}
+        <a href="https://www.coach.com" target="_blank" rel="noopener">
+          https://development1.coach.com/sale
+        </a>{" "}
+        on 4/13/2021 at 10:00am EST
       </H4>
 
       <Page data={data.PAGES.HP} rigor={data.RIGOR} title={"HOME"} />
