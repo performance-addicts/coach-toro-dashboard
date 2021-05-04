@@ -93,7 +93,7 @@ module.exports = {
         API: {
           KEY: "1qqtUC1rfm3WHcb_U7g1",
           URL: {
-            DEV: "https://monitoring.rigor.com/reports/7535",
+            DEV: "https://monitoring.rigor.com/reports/7865",
             PRD: "https://monitoring.rigor.com/reports/7545",
           },
         },
@@ -115,7 +115,7 @@ module.exports = {
         },
         PLP: {
           URL: {
-            DEV: "https://development1.coach.com/sale",
+            DEV: "https://development1.coach.com/shop/sit-products",
             PRD: "https://www.coach.com/shop/women-new-arrivals-new-arrivals",
           },
           KPI: {
