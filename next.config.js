@@ -1,8 +1,21 @@
 const moment = require("moment");
 
 const date = {
-  start: moment().subtract(15, "days").format("MM-DD"),
+  start: moment().subtract(11, "days").format("MM-DD"),
   end: moment().subtract(1, "days").format("MM-DD"),
+};
+
+const ID = {
+  DEV: {
+    HP: "185460",
+    PLP: "185466",
+    PDP: "185467",
+  },
+  PROD: {
+    HP: "191825",
+    PLP: "191826",
+    PDP: "191832",
+  },
 };
 
 module.exports = {
@@ -94,7 +107,7 @@ module.exports = {
           KEY: "1qqtUC1rfm3WHcb_U7g1",
           URL: {
             DEV: "https://monitoring.rigor.com/reports/7865",
-            PRD: "https://monitoring.rigor.com/reports/7545",
+            PRD: "https://monitoring.rigor.com/reports/8267",
           },
         },
       },
@@ -102,45 +115,43 @@ module.exports = {
         HP: {
           URL: {
             DEV: "https://development1.coach.com/",
-            PRD: "https://www.coach.com/",
+            PRD: "https://production1.coach.com/",
           },
           KPI: {
-            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=185460&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
-            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=184169&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=${ID.DEV.HP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=${ID.PROD.HP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
           },
           BGT: {
-            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=185460&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
-            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=184169&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=${ID.DEV.HP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=${ID.PROD.HP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
           },
         },
         PLP: {
           URL: {
             DEV: "https://development1.coach.com/shop/sit-products",
-            PRD: "https://www.coach.com/shop/women-new-arrivals-new-arrivals",
+            PRD: "https://production1.coach.com/shop/new",
           },
           KPI: {
-            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=185466&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
-            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=184175&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=${ID.DEV.PLP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=${ID.PROD.PLP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
           },
           BGT: {
-            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=185466&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
-            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=184175&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=${ID.DEV.PLP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=${ID.PROD.PLP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
           },
         },
         PDP: {
           URL: {
-            DEV:
-              "https://development1.coach.com/en/products/archive-glovetanned-pebble-leather-duffle-20/78804.html?frp=78804%20B4/BK",
-            PRD:
-              "https://www.coach.com/coach-alie-shoulder-bag-in-signature-jacquard-with-snakeskin-detail/C0712.html?dwvar_color=B4S0M",
+            DEV: "https://development1.coach.com/en/products/archive-glovetanned-pebble-leather-duffle-20/78804.html?frp=78804%20B4/BK",
+            PRD: "https://production1.coach.com/products/small-wristlet-in-signature-jacquard/5476-B4S0M.html",
           },
           KPI: {
-            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=185467&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
-            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=184173&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=${ID.DEV.PDP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=${ID.PROD.PDP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
           },
           BGT: {
-            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=185467&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
-            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=184173&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=${ID.DEV.PDP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
+            PRD: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T03:13:36.823Z&to=2021-${date.end}T03:13:36.823Z&segment=status&metrics[]=median_content_bytes&metrics[]=median_html_bytes&metrics[]=median_image_bytes&metrics[]=median_javascript_bytes&metrics[]=median_css_bytes&metrics[]=median_video_bytes&metrics[]=median_font_bytes&metrics[]=median_other_bytes&status[]=success&status[]=failure&check_ids[]=${ID.PROD.PDP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
           },
         },
       },
