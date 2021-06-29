@@ -1,7 +1,7 @@
 const moment = require("moment");
 
 const date = {
-  start: moment().subtract(11, "days").format("MM-DD"),
+  start: moment().subtract(12, "days").format("MM-DD"),
   end: moment().subtract(1, "days").format("MM-DD"),
 };
 
