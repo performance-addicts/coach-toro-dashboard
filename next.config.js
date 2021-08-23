@@ -7,14 +7,14 @@ const date = {
 
 const ID = {
   DEV: {
-    HP: "185460",
-    PLP: "185466",
-    PDP: "185467",
+    HP: "210973",
+    PLP: "210975",
+    PDP: "210974",
   },
   PROD: {
-    HP: "191825",
-    PLP: "191826",
-    PDP: "191832",
+    HP: "197352",
+    PLP: "197351",
+    PDP: "197594",
   },
 };
 
@@ -95,19 +95,19 @@ module.exports = {
         },
       },
       CONFIGURATION: {
-        SPRINT: "7",
+        SPRINT: "2.3",
         "ACCEPTANCE PROFILE": "3G FAST",
         "NETWORK PROFILE": "LTE",
         "NETWORK THROTTLING": "70 ms TCP RTT, 12000 Kbps (SIMULATED)",
-        "UA PROFILE": "iPhone 6/7/8",
+        "UA PROFILE": "iPhone X",
         "AVERAGE MEAN SCORE": "48 PASSES (24 HRS)",
       },
       RIGOR: {
         API: {
           KEY: "1qqtUC1rfm3WHcb_U7g1",
           URL: {
-            DEV: "https://monitoring.rigor.com/reports/7865",
-            PRD: "https://monitoring.rigor.com/reports/8267",
+            DEV: "TBD",
+            PRD: "TBD",
           },
         },
       },
@@ -115,7 +115,7 @@ module.exports = {
         HP: {
           URL: {
             DEV: "https://development1.coach.com/",
-            PRD: "https://production1.coach.com/",
+            PRD: "https://mw-development1.coach.com/",
           },
           KPI: {
             DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=${ID.DEV.HP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
@@ -128,8 +128,8 @@ module.exports = {
         },
         PLP: {
           URL: {
-            DEV: "https://development1.coach.com/shop/sit-products",
-            PRD: "https://production1.coach.com/shop/new",
+            DEV: "https://development1.coach.com/shop/new",
+            PRD: "https://mw-development1.coach.com/shop/new",
           },
           KPI: {
             DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=${ID.DEV.PLP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
@@ -142,8 +142,8 @@ module.exports = {
         },
         PDP: {
           URL: {
-            DEV: "https://development1.coach.com/en/products/archive-glovetanned-pebble-leather-duffle-20/78804.html?frp=78804%20B4/BK",
-            PRD: "https://production1.coach.com/products/small-wristlet-in-signature-jacquard/5476-B4S0M.html",
+            DEV: "https://development1.coach.com/products/tabby-shoulder-bag-26/73995.html",
+            PRD: "https://mw-development1.coach.com/products/tabby-shoulder-bag-26/73995.html",
           },
           KPI: {
             DEV: `https://monitoring.rigor.com/api/v2/metrics/data.json?from=2021-${date.start}T21:18:16.986Z&to=2021-${date.end}T21:18:16.986Z&segment=status&metrics[]=median_first_contentful_paint_time_ms&metrics[]=median_first_byte_time_ms&metrics[]=median_start_render_ms&metrics[]=median_first_interactive_time_ms&metrics[]=median_speed_index&metrics[]=median_lighthouse_performance_score&metrics[]=median_largest_contentful_paint_time_ms&metrics[]=median_total_blocking_time_ms&metrics[]=median_cumulative_layout_shift&status[]=success&status[]=failure&check_ids[]=${ID.DEV.PDP}&interval=24h&grouping[]=page&check_type=real_browser&type=line`,
