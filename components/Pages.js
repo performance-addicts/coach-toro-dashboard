@@ -8,8 +8,12 @@ function Pages({ data }) {
       <H2>Pages</H2>
       <H4>
         Current prod:{" "}
-        <a href="https://production1.coach.com" target="_blank" rel="noopener">
-          https://production1.coach.com
+        <a
+          href="https://mw-development1.coach.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          https://mw-development1.coach.com/
         </a>
       </H4>
 
